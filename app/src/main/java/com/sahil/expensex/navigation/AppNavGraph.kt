@@ -19,7 +19,16 @@ fun AppNavGraph(){
        startDestination = AppDestinations.SPLASH
    ) {
        composable(AppDestinations.SPLASH){
-           SplashScreen()
+           SplashScreen(
+               onNavigateToLogin = {
+                   navController.navigate(AppDestinations.LOGIN){
+                       popUpTo(AppDestinations.SPLASH){
+                           inclusive = true
+                       }
+                   }
+
+               }
+           )
        }
 
        composable(AppDestinations.HOME){

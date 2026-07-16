@@ -17,7 +17,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sahil.expensex.presentation.auth.components.LoginHeader
+import com.sahil.expensex.presentation.auth.components.buttons.ExpenseXButton
 import com.sahil.expensex.presentation.auth.components.textfields.ExpenseXTextField
+import com.sahil.expensex.presentation.auth.components.textfields.PasswordTextField
 
 @Composable
 fun LoginScreen() {
@@ -35,7 +37,13 @@ fun LoginScreen() {
         Spacer(modifier = Modifier.height(32.dp))
 
         ExpenseXTextField(email,{email=it},"Email Address")
-        ExpenseXTextField(password,{password=it},"Password")
+        PasswordTextField(password, onValueChange = {password=it},"Password")
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        ExpenseXButton("Log in", onClick = {})
+
+
 
     }
 

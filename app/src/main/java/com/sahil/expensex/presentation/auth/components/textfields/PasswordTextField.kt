@@ -1,7 +1,6 @@
 package com.sahil.expensex.presentation.auth.components.textfields
 
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -20,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material.icons.outlined.Password
 import androidx.compose.material3.IconButton
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -47,6 +47,12 @@ fun PasswordTextField(
         singleLine = true,
         shape = RoundedCornerShape(16.dp),
         colors = OutlinedTextFieldDefaults.colors(),
+        leadingIcon = {
+            Icon(
+                imageVector = Icons.Outlined.Password,
+                contentDescription = null
+            )
+        },
 
         visualTransformation = if(visiblePassword) VisualTransformation.None else PasswordVisualTransformation(),
 

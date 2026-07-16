@@ -24,7 +24,7 @@ fun LoginHeader(){
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             style= MaterialTheme.typography.headlineLarge,
-            modifier = Modifier.padding(top=72.dp)
+            modifier = Modifier.padding(top=24.dp)
         )
 
         Spacer(modifier = Modifier.height(8.dp))

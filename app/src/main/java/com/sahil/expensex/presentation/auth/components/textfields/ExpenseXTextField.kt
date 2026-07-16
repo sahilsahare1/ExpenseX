@@ -2,6 +2,9 @@ package com.sahil.expensex.presentation.auth.components.textfields
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -29,7 +32,13 @@ fun ExpenseXTextField(
         },
         singleLine = true,
         shape = RoundedCornerShape(16.dp),
-        colors = OutlinedTextFieldDefaults.colors()
+        colors = OutlinedTextFieldDefaults.colors(),
+        leadingIcon = {
+            Icon(
+                imageVector = Icons.Outlined.Email,
+                contentDescription = null
+            )
+        }
 
 
 

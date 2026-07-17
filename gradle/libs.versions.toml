@@ -12,6 +12,9 @@ navigationCompose = "2.9.3"
 lifecycleRuntimeCompose = "2.10.0"
 materialIcons = "1.7.8"
 
+googleServices = "4.4.3"
+firebaseBom = "34.2.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -33,7 +36,16 @@ androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lif
 
 androidx-compose-material-icons = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "materialIcons" }
 
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
+
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

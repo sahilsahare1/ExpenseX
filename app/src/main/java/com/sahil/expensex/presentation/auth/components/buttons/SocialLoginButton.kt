@@ -53,7 +53,7 @@ fun SocialLoginButton (
 
         Text(
             text=name,
-            style= MaterialTheme.typography.bodyMedium
+            style= MaterialTheme.typography.bodyLarge
         )
 
     }

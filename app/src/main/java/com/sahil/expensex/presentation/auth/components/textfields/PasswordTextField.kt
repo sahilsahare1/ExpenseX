@@ -13,7 +13,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
@@ -33,7 +32,7 @@ fun PasswordTextField(
 
 ) {
 
-    var visiblePassword by remember(){ mutableStateOf(false) }
+    var visiblePassword by remember { mutableStateOf(false) }
 
 
 

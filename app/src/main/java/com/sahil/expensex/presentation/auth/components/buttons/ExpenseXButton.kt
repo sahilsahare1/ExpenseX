@@ -24,7 +24,8 @@ fun ExpenseXButton(
         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
     ) {
         Text(
-            text=text
+            text=text,
+            style = MaterialTheme.typography.bodyLarge
         )
     }
 

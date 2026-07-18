@@ -13,7 +13,8 @@ lifecycleRuntimeCompose = "2.10.0"
 materialIcons = "1.7.8"
 
 googleServices = "4.4.3"
-firebaseBom = "34.2.0"
+firebaseBom = "34.16.0"
+playServicesCoroutines = "1.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,9 +39,9 @@ androidx-compose-material-icons = { group = "androidx.compose.material", name = 
 
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 
-firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
-
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+play-services-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "playServicesCoroutines" }
 
 
 [plugins]

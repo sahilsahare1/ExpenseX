@@ -34,7 +34,8 @@ import com.sahil.expensex.presentation.auth.components.textfields.ForgetPassword
 import com.sahil.expensex.presentation.auth.components.LoginHeader
 import com.sahil.expensex.presentation.auth.components.buttons.ExpenseXButton
 import com.sahil.expensex.presentation.auth.components.buttons.SocialLoginButton
-import com.sahil.expensex.presentation.auth.components.textfields.ExpenseXTextField
+import com.sahil.expensex.presentation.auth.components.textfields.EmailTextField
+
 import com.sahil.expensex.presentation.auth.components.textfields.PasswordTextField
 import com.sahil.expensex.presentation.auth.viewmodel.LoginViewModel
 import com.sahil.expensex.presentation.components.common.DividerWithText
@@ -69,11 +70,11 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        LoginHeader()
+        LoginHeader("Welcome Back","Login to continue tracking to your expenses")
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        ExpenseXTextField(uiState.email,viewmodel::onEmailChange,"Email Address")
+        EmailTextField(uiState.email,viewmodel::onEmailChange,"Email Address")
         Spacer(modifier = Modifier.height(16.dp))
         PasswordTextField(uiState.password, onValueChange = viewmodel::onPasswordChange,"Password")
         Spacer(modifier = Modifier.height(12.dp))
@@ -111,7 +112,7 @@ fun LoginScreen(
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        BottomSignUp({})
+        BottomSignUp("Don't have an account? ","Sign Up",{})
 
     }
 

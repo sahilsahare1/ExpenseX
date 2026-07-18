@@ -12,6 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun BottomSignUp(
+    text: String,
+    subtext: String,
     onSignUpClick: () -> Unit
 ) {
 
@@ -21,12 +23,12 @@ fun BottomSignUp(
         verticalAlignment = Alignment.CenterVertically
     ) {
 
-        Text(text="Don't have an account? ")
+        Text(text=text)
 
         TextButton(
             onClick = onSignUpClick
         ) {
-            Text(text="Sign Up")
+            Text(text=subtext)
         }
 
     }

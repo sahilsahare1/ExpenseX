@@ -14,13 +14,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@Preview(showBackground = true)
+
 @Composable
-fun LoginHeader(){
+fun LoginHeader(text: String,subtext: String){
 
     Column() {
         Text(
-            text="Welcome Back ",
+            text=text,
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             style= MaterialTheme.typography.headlineLarge,
@@ -30,7 +30,7 @@ fun LoginHeader(){
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "Login to tracking your expenses",
+            text = subtext,
             fontSize = 16.sp,
             color = Color.Gray,
             style = MaterialTheme.typography.bodyLarge

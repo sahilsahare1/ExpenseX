@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.composable
 import com.sahil.expensex.presentation.auth.login.LoginScreen
+import com.sahil.expensex.presentation.auth.signup.SignUpScreen
 import com.sahil.expensex.presentation.home.HomeScreen
 import com.sahil.expensex.presentation.splash.SplashScreen
 
@@ -21,12 +22,27 @@ fun AppNavGraph(){
        composable(AppDestinations.SPLASH){
            SplashScreen(
                onNavigateToLogin = {
-                   navController.navigate(AppDestinations.LOGIN) {
+                   navController.navigate(AppDestinations.SIGNUP) {
                        popUpTo(AppDestinations.SPLASH) {
                            inclusive = true
                        }
                    }
 
+               }
+           )
+       }
+
+       composable(AppDestinations.SIGNUP){
+           SignUpScreen(
+               onSignUpSuccess = {
+                   navController.navigate(AppDestinations.HOME){
+                       popUpTo(AppDestinations.SIGNUP){
+                           inclusive=true
+                       }
+                   }
+               },
+               onLoginClick = {
+                   navController.navigate(AppDestinations.LOGIN)
                }
            )
        }
@@ -43,7 +59,9 @@ fun AppNavGraph(){
                            inclusive=true
                        }
                    }
-
+               },
+               onSignUpClick = {
+                   navController.navigate(AppDestinations.SIGNUP)
                }
            )
        }
@@ -51,10 +69,7 @@ fun AppNavGraph(){
    }
 }
 
-@Composable
-fun HomeScreen() {
-    TODO("Not yet implemented")
-}
+
 
 
 

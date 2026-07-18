@@ -5,4 +5,6 @@ object AppDestinations{
     const val LOGIN = "login"
     const val HOME = "home"
 
+    const val SIGNUP = "signup"
+
 }

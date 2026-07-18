@@ -1,6 +1,7 @@
 package com.sahil.expensex.data.repository
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.userProfileChangeRequest
 import com.sahil.expensex.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
 
@@ -17,10 +18,18 @@ class FirebaseAuthRepository(
         }
     }
 
-    override suspend fun signUp(email: String, password: String): Result<Unit> {
+    override suspend fun signUp(name: String, email: String, password: String): Result<Unit> {
         return try {
             auth.createUserWithEmailAndPassword(email, password).await()
+
+            val profileUpdates = userProfileChangeRequest {
+                displayName = name
+            }
+
+            auth.currentUser?.updateProfile(profileUpdates)?.await()
+
             Result.success(Unit)
+
         } catch (e: Exception) {
             Result.failure(e)
         }

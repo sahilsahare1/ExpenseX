@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import com.google.firebase.auth.FirebaseAuth
 import com.sahil.expensex.R
 import com.sahil.expensex.data.repository.FirebaseAuthRepository
+import com.sahil.expensex.navigation.AppDestinations
 
 import com.sahil.expensex.presentation.auth.components.BottomSignUp
 import com.sahil.expensex.presentation.auth.components.textfields.ForgetPasswordText
@@ -43,7 +44,8 @@ import com.sahil.expensex.presentation.components.common.ExpenseXLogo
 
 @Composable
 fun LoginScreen(
-    onLoginSuccess: () -> Unit
+    onLoginSuccess: () -> Unit,
+    onSignUpClick: () -> Unit
 ) {
 
     val repository = remember { FirebaseAuthRepository(FirebaseAuth.getInstance()) }
@@ -100,7 +102,7 @@ fun LoginScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         DividerWithText()
 
@@ -110,9 +112,9 @@ fun LoginScreen(
         Spacer(modifier = Modifier.height(16.dp))
         SocialLoginButton("Apple",R.drawable.apple, onClick ={} )
 
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
-        BottomSignUp("Don't have an account? ","Sign Up",{})
+        BottomSignUp("Don't have an account? ","Sign Up", onSignUpClick)
 
     }
 

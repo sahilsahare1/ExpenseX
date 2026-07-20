@@ -39,6 +39,10 @@ fun HomeScreen() {
 
         BalanceCard("24,345.00","15.43%")
 
+        Spacer(modifier = Modifier.height(20.dp))
+
+        ExpenseOverview()
+
 
 
     }

@@ -79,8 +79,6 @@ fun RecentTransaction(){
             iconBackground = Color(0xFFFF7043)
         )
 
-
-
     }
 
 }

@@ -7,12 +7,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Analytics
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Money
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Analytics
 import androidx.compose.material.icons.outlined.Home
@@ -21,7 +15,6 @@ import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -103,5 +96,4 @@ fun BottomNavigationBar(
 @Composable
 private fun BottomNavigationBarPreview() {
     BottomNavigationBar()
-    
 }
